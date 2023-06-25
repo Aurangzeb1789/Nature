@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;900&display=swap');
+*{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+}
+body{
+    font-family: 'Bodoni Moda', serif;
+    font-size: 1.2rem;
+}
+
+.container{
+             height: 100vh;
+             display: flex;
+             justify-content: space-evenly;
+             align-items: center;
+             background:linear-gradient(to right, #041308 , #0b3317);
+}
+.left-text{
+             flex-basis: 30%;
+             color: white;
+             margin-bottom: 10px;
+             letter-spacing: 1px;
+}
+.right-gallery{
+                  flex-basis: 50%;
+                  display: grid;
+                  gap:8px;
+                  grid-template-columns:  auto auto auto;
+                  grid-template-rows: 150px 150px 150px 150px;
+}
+.box{
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        color: white;
+        font-weight: 700;
+        background-size: cover;
+        background-position: top;
+        background-color: #222;
+        background-blend-mode: hard-light;
+        transition: all 1s ease-in-out
+}
+.box:hover{
+                background-color: #999;
+                background-position: center;
+                box-shadow: 0 0 6px #fff;
+}
+.row-span{
+               grid-row: span 2;
+}
+.col-span{
+              grid-column: span 2;
+}
+
+@media screen and (max-width:1024px) {
+                             
+          .container{
+                       flex-direction: column;
+                       padding-block: 20px;
+                       height: auto;
+                       
+
+                    }
+                    .box{
+                             grid-row: span 1;
+                             grid-column: span 3;
+                    }
+          .left-text{
+                        text-align: center;
+                        /* flex-basis: 0%; */
+                        padding: 20px;
+          }
+          .right-gallery {
+                             width: 100%;
+                             /* grid-auto-rows: 150px ; */
+                             grid-template-rows:300px 300px 300px 300px 300px 300px 300px;
+                             padding: 10px;
+                         }
+}
